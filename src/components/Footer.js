@@ -3,10 +3,10 @@ import React from 'react';
 const Footer = () => {
     return (
 
-        <footer className="text-center text-lg-start bg-light text-muted mt-3">
+        <footer className="text-center text-lg-start nav-bg">
             {/* Section: Links  */}
             <section >
-                <div className="container text-center text-md-start mt-5 pt-1">
+                <div className="container text-center text-md-start pt-1">
                     {/* Grid row */}
                     <div className="row mt-3">
                         {/* Grid column */}
@@ -54,7 +54,7 @@ const Footer = () => {
             {/* Section: Links  */}
             <div className="text-center p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                 © 2022 Copyright:
-                <a className="text-reset fw-bold" href="/">Kable Capstone</a>
+                <a className="text-reset fw-bold" href="/home">Kable Capstone</a>
             </div>
         </footer>
 

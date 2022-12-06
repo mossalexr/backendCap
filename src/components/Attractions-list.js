@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BACKEND_URL } from '../config';
 
 const Attraction = (props) => (
-  <div className='text-center mt-4 mx-2 border rounded bg-light'>
+  <div className='text-center mt-4 mx-2 border rounded bg-secondary hvr-grow'>
     <h5>{props.attraction.name}</h5>
     <p>{props.attraction.location}</p>
     <img className='attractionsImg' src={props.attraction.imageURL} alt='otr' />
@@ -17,7 +18,7 @@ export default class AttractionsList extends Component {
     this.state = { attractions: [] };
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/attractions/')
+    axios.get(BACKEND_URL + 'attractions/')
       .then(response => {
         this.setState({ attractions: response.data });
       })
@@ -33,8 +34,8 @@ export default class AttractionsList extends Component {
   }
   render() {
     return (
-      <div>
-        <h2 className='center mt-3'>Attractions</h2>
+      <div className='bg pb-5'>
+        <h2 className='homeHead center pt-3'>Attractions</h2>
         <div className="container-fluid">
           <div className='d-flex flex-wrap'>
             {this.attractionList()}
