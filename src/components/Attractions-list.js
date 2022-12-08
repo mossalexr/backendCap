@@ -3,10 +3,10 @@ import axios from 'axios';
 import { BACKEND_URL } from '../config';
 
 const Attraction = (props) => (
-  <div className='text-center mt-4 mx-2 border rounded bg-secondary hvr-grow'>
+  <div className='col-3 text-center mt-4 mx-2 border rounded bg-secondary hvr-grow'>
     <h5>{props.attraction.name}</h5>
     <p>{props.attraction.location}</p>
-    <img className='attractionsImg' src={props.attraction.imageURL} alt='otr' />
+    <img className='attractionsImg img-fluid' src={props.attraction.imageURL} alt='otr' />
   </div>
 )
 
@@ -34,10 +34,10 @@ export default class AttractionsList extends Component {
   }
   render() {
     return (
-      <div className='bg pb-5'>
+      <div className='bg pb-5 '>
         <h2 className='homeHead center pt-3'>Attractions</h2>
-        <div className="container-fluid">
-          <div className='d-flex flex-wrap'>
+        <div className="container ">
+          <div className='d-flex  justify-content-center flex-wrap'>
             {this.attractionList()}
           </div>
         </div>
